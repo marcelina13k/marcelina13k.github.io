@@ -5,19 +5,191 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 </head>
 
 <body>
     <script src="script.js"></script>
     <header>
-        <nav class="navabr">
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="top-menu-wrapper">
+                    <div class="menu-button">
+                        <p>MARCELINA KROWINSKA</p>
+                    </div>
+                    <div class="title-wrapper">
+                        <a href="#hero">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#work">Work</a>
+                        <a href="#life">Life</a>
+                    </div>
+                </div>
+                <div class="social-wrapper">
+                    <a href="https://github.com/marcelina13k" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+                        <img src="github-9-24.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcelina-krowinska/" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+                        <img src="linkedin-24.png">
+                    </a>
+                    <a href="mailto: mkrowinska@gmail.com" class="social-icon-link">
+                        <img src="email-2-24.png">
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>
+    <div class="page-div hero" id="hero">
+        <div class="section-title-feature-wrapper">
+            <div class="section-title-feature">Welcome!</div>
+        </div>
+        <section class="main-section">
+            <div class="intro">
+                <p style="font-size: 32px;">Hi! I'm Marcelina.</p>
+                <p>I'm a recent graduate from Virginia Tech with a BS in Computer Science. Experienced with frontend and backend development. Passionate about technology and music. Take a look around to learn more about me :)</p>
+                <p>Based in NYC.</p>
+            </div>
+            <div class="my-image">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" overflow="-moz-hidden-unscrollable">
+                    <path fill="#D0E2FF" d="M17.5,-34.2C25,-25.9,35.1,-26,38.9,-21.7C42.7,-17.4,40.3,-8.7,43.8,2C47.3,12.7,56.7,25.4,53.1,30.2C49.6,35,33.1,31.9,22.1,35.3C11.1,38.7,5.5,48.7,-0.2,49C-5.9,49.2,-11.7,39.8,-19.8,34.7C-27.9,29.6,-38.2,28.8,-44.2,23.8C-50.2,18.7,-51.9,9.3,-48.6,1.9C-45.3,-5.5,-37,-11,-31.2,-16.4C-25.4,-21.8,-22,-27.1,-17.2,-36.9C-12.5,-46.8,-6.2,-61.1,-0.6,-60.1C5,-59,9.9,-42.4,17.5,-34.2Z" transform="translate(100 100)" />
+                </svg>
+                <img src="file.png" width="300" height="322">
+            </div>
+        </section>
+    </div>
+    <div class="page-div projects" id="projects">
+        <div class="section-title-feature-wrapper">
+            <div class="section-title-feature">Projects</div>
+        </div>
+        <section class="project-section">
+            <div class="search-wrapper">
+                <div>View by: </div>
+                <div class="view-buttons-wrapper">
+                    <button class="search-button">WebDev</button>
+                    <button class="search-button">Solution Arch</button>
+                    <button class="search-button">Hackathon</button>
+                    <button class="search-button">AI</button>
+                </div>
+            </div>
+            <div class="project-tiles-wrapper">
+                <div class="project-tile one" onclick="location.href='https://github.com/cpdunphy/cinematch';" style="cursor: pointer;">
+                    <div class="project-desc">
+                        <h3>CineMatch</h3>
+                        <hr class="solid">
+                        <p> CineMatch will help pair you and your friends with the perfect film or show to watch. Users can join sessions with their friends, and the app has a swiping interface (similar to a dating app) for determining the optimal title to watch.</p>
+                    </div>
+                    <div class="project-tag-wrapper">
+                        <div class="project-tag">Python</div>
+                        <div class="project-tag">Flutter</div>
+                    </div>
+                </div>
+                <div class="project-tile two">
+                    <div class="project-desc">
+                        <h3>Auto-dictionary Chrome Extension</h3>
+                        <p style="font-size: 12px; font-style: italic; margin-top: -10px; margin-bottom: 15px;">in progress</p>
+                        <hr class="solid">
+                        <p>Ever wonder about the meaning of a word or phrase when reading something online? Simply highlight the word you want, automatically see its definition, and save it to your personal digital dictionary.</p>
+                    </div>
+                    <div class="project-tag-wrapper">
+                        <div class="project-tag">JavaScript</div>
+                        <div class="project-tag">JSON</div>
+                        <div class="project-tag">HTML/CSS</div>
+                    </div>
+                </div>
+                <div class="project-tile three" onclick="location.href='https://www.figma.com/design/1C98RsEIc3CcwO7VesDrbw/Architectural-Prototype?node-id=2-4&t=KIKrlZJn7BcjtaPs-0'" style="cursor: pointer;">
+                    <div class="project-desc">
+                        <h3>University AI Chatbot</h3>
+                        <hr class="solid">
+                        <p> Solution architecture prototype of AI-enhanced chatbot, seamlessly integrated into Virginia Tech's Hokie Spa to revolutionize student support. Leverages machine learning and external systems to streamline student scheduling.</p>
+                    </div>
+                    <div class="project-tag-wrapper">
+                        <div class="project-tag">Solution Architecture</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="page-div work" id="work">
+        <div class="section-title-feature-wrapper">
+            <div class="section-title-feature">Work</div>
+        </div>
+        <section class="work-section">
+            <div class="work-wrapper">
+                <div class="work-experience one">
+                    <h3 class="work-name">Shade Inc.</h3>
+                    <p class="role-desc">Product Manager, Developer Advocate</p>
+                    <p>As a Product Manager at Shade, I managed the Creator Program for product beta testing and quality analysis. I led client outreach, establishing relationships with over 200 industry professionals to facilitate early product adoption. I initiated a social media presence, achieving a 500% follower increase in one month. Additionally, I analyzed business data to construct a marketing plan and contributed to the front-end development of the company website, enhancing user experience.</p>
+                </div>
+                <div class="work-experience two">
+                    <h3 class="work-name">Neighborhood Camp</h3>
+                    <p class="role-desc">Founder, Manager, Counselor</p>
+                    <p>As the founder and manager of Neighborhood Camp, I established and managed a summer camp serving over 50 children, demonstrating entrepreneurial spirit and leadership. I ensured smooth daily operations, managed financial resources for sustainable growth, and cultivated open communication with clients to implement feedback. Additionally, I recruited, trained, and mentored a team of co-counselors, fostering a collaborative environment.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="page-div life" id="life">
+        <div class="section-title-feature-wrapper">
+            <div class="section-title-feature">Life</div>
+        </div>
+        <section class="life-section">
+            <p>A random collection of other important things that make up my life</p>
+            <div class="life-wrapper">
+                <div class="me-thing-horizontal one">
+                    <div class="me-thing-desc">
+                        <p style="font-size: 36px; margin-bottom: 5px;">Music</p>
+                        <p>I listen to music pretty much 24/7. Check out my Spotify to see the soundtrack of my life.</p>
+                    </div>
+                    <div class="me-thing-visual">
+                        <!--a href="https://open.spotify.com/user/mkrowinska?si=3fd3893d9fae48db" target="blank" rel="noopener noreferrer"">
+                            <img src="Spotify.png" height="200px">
+                        </a-->
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/67GvlUv0oW0abUv01cTOuB?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="me-thing-horizontal two">
+                    <div class="me-thing-desc">
+                        <p style="font-size: 36px; margin-bottom: 5px;">Fitness</p>
+                        <p>Keeps me sane. Grew up swimming, now dabble in running, tennis, and crossfit.</p>
+                    </div>
+                    <div class="me-thing-visual">
+                        <img src="fitness.jpg" height="200px">
+                    </div>
+                </div>
+                <div class="me-thing-vertical one">
+                    <div class="me-thing-desc-vert">
+                        <p style="font-size: 36px; margin-bottom: 5px; margin-top: 0;">My favorite websites</p>
+                        <p>Things I find cool or helpful that you should know about too.</p>
+                    </div>
+                    <div class="me-thing-list">
+                        <a href="https://liveterm.vercel.app/">Cool Terminal Personal Site</a>
+                        <a href="https://eunoia.world/">Eunoia: Words that don't translate</a>
+                    </div>
+                </div>
+                <div class="me-thing-vertical two">
+                    <div class="me-thing-desc-vert">
+                        <p style="font-size: 36px; margin-bottom: 5px; margin-top: 0;">My reading list</p>
+                    </div>
+                    <div class="me-thing-list">
+                        <!--p>Most Recent</p>
+                        <p>book</p>
+                        <p>book</p>
+                        <p>book</p-->
+                    </div>
+                    <a href="http://stirring-hook-3cc.notion.site" style="color: black;" target="blank" rel="noopener noreferrer"">See the full list with ratings and thoughts</a>
+                </div>
+                <div class="me-thing-horizontal three">
+                    <div class="me-thing-desc">
+                        <p style="font-size: 36px; margin-bottom: 5px;">Other Hobbies</p>
+                        <p>Some creative things. Most recently I spent time refurbishing and redesigning these cornhole boards.</p>
+                    </div>
+                    <div class="me-thing-visual">
+                        <img src="cornhole.jpg" height="300px">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--div class="page-div footer" id="footer">
+
+    </div-->
 </body>
