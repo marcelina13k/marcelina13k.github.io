@@ -5,11 +5,23 @@ html {
 }
 
 body {
-    background-color: #002a72;
+    background: linear-gradient(-45deg, #0e1c36, #2f003b, #0c1a61, #0e1c36);
+	background-size: 400% 800%;
+	animation: bg-animation 5s infinite alternate;
+	height: 100vh;
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 
 header {
