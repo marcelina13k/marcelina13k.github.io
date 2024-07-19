@@ -270,8 +270,34 @@ hr {
     width: 80%;
 }
 
+.project-tiles-wrapper {
+    overflow: hidden;
+    display: grid;
+    margin-top: 20px;
+    margin-left: 0;
+    align-items:flex-start;
+    align-self: center;
+    justify-content: center;
+    /*grid-auto-columns: 1fr;*/
+    /*grid-template-columns: 1fr;*/
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /*tell the container to always create as much columns as needed and size 
+    them to fill the whole width (auto-fill), with the constraint that a single 
+    column must be at least 350px wide and at most 1fr(FRaction) wide, which makes all our columns sized equally.*/
+    grid-template-rows: auto;
+    order: 0;
+    flex: 0 auto;
+    flex-flow: row;
+    object-fit: fill;
+    text-align: center;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    max-width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
-@media (max-width: 1024px) {
+/*@media (max-width: 1024px) {
     .project-tiles-wrapper {
         overflow: hidden;
         display: grid;
@@ -280,8 +306,9 @@ hr {
         align-items:flex-start;
         align-self: center;
         justify-content: center;
-        /*grid-auto-columns: 1fr;*/
+        /*grid-auto-columns: 1fr;
         grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         grid-template-rows: auto;
         order: 0;
         flex: 0 auto;
@@ -304,7 +331,7 @@ hr {
         align-items:flex-start;
         align-self: center;
         justify-content: center;
-        /*grid-auto-columns: 1fr;*/
+        /*grid-auto-columns: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         order: 0;
@@ -317,7 +344,8 @@ hr {
         width: 65%;
         max-width: 90%;
     }
-}
+}*/
+
 
 .project-tile {
     z-index: 2;
