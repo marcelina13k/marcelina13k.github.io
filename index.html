@@ -10,11 +10,40 @@
 
 <body>
     <script src="script.js"></script>
-    <header>
-        <div class="nav-container">
-            <nav class="navbar">
+    <div class="sticky-nav w-nav" data-collapse="small" data-animation="default" data-duration="1500" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner">
+        <div class="nav-container w-container">
+            <nav class="navbar w-navbar" role="navigation" style="transform: translateY(0px) translateX(0px);">
                 <div class="top-menu-wrapper">
-                    <div class="menu-button">
+                    <div class="menu-title">
+                        <p>MARCELINA KROWINSKA</p>
+                    </div>
+                    <div class="title-wrapper">
+                        <a href="#hero">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#work">Work</a>
+                        <a href="#life">Life</a>
+                    </div>
+                </div>
+                <div class="social-wrapper">
+                    <a href="https://github.com/marcelina13k" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+                        <img src="github-9-24.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcelina-krowinska/" class="social-icon-link" target="_blank" rel="noopener noreferrer">
+                        <img src="linkedin-24.png">
+                    </a>
+                    <a href="mailto: mkrowinska@gmail.com" class="social-icon-link">
+                        <img src="email-2-24.png">
+                    </a>
+                </div>
+            </nav>
+            <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="icon-2 w-icon-nav-menu"></div>
+            </div>
+        </div>
+        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0" style="display: none;">
+            <nav class="navbar w-navbar" role="navigation" style="transform: translateY(0px) translateX(0px); transition: transform 1500ms ease 0s;" data-navbar-open>
+                <div class="top-menu-wrapper">
+                    <div class="menu-title">
                         <p>MARCELINA KROWINSKA</p>
                     </div>
                     <div class="title-wrapper">
@@ -37,7 +66,7 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </div>
     <div class="page-div hero" id="hero">
         <div class="section-title-feature-wrapper">
             <div class="section-title-feature">Welcome!</div>
