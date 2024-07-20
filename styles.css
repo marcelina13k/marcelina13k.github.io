@@ -5,9 +5,10 @@ html {
 }
 
 body {
-    background: linear-gradient(-45deg, #0e1c36, #2f003b, #0c1a61, #0e1c36);
-	background-size: 400% 800%;
-	animation: bg-animation 5s infinite alternate;
+    /*background: linear-gradient(-45deg, #0e1c36, #2f003b, #0c1a61, #0e1c36);
+    background: 400% 800%;
+	animation: bg-animation 5s infinite alternate;*/
+    background-color: #0c1a61;
 	height: 100vh;
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
@@ -511,11 +512,10 @@ hr {
     border-bottom: 1px solid #afafaf;
     margin-top: 2px;
     margin-bottom: 2px;
-    max-width: 70%;
 }
 
 .work-experience {
-    max-width: 100%;
+    max-width: 70%;
 }
 
 .work-name {
@@ -543,7 +543,7 @@ hr {
 }
 
 .me-thing-horizontal {
-    height: 200px;
+    max-height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -572,6 +572,7 @@ hr {
 }
 
 .me-thing-visual {
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -648,21 +649,41 @@ hr {
         overflow: hidden;
     }
     .icon-2 {
-        -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
         color: #d8d8d8;
-        background-color: rgba(0, 0, 0, .3);
+        background-color: rgba(0, 34, 129, 0.6);
         border-radius: 32px;
-        margin-top: 10px;
+        margin-top: 20px;
         padding: 3.5px 3px 3px 3.5px;
-        transform: scale(1.6);
+        transform: scale(5);
     }
+
     .page-div {
         margin-left: 1vw;
-        margin-right: 5px;
+        margin-right: 1vw;
         padding: 3vw;
         border-radius: 24px;
         background-color: white;
+    }
+
+    .intro {
+        max-width: 90%;
+    }
+    .my-image {
+        display: none;
+    }
+
+    .work-experience {
+        max-width: 90%;
+    }
+
+    .life-wrapper {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
     }
 }
 
