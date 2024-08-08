@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <script src="script.js"></script>
     <div class="sticky-nav w-nav" data-collapse="small" data-animation="default" data-duration="1500" data-easing="ease" data-easing2="ease" data-doc-height="1" role="banner">
         <div class="nav-container w-container">
             <nav class="navbar w-navbar" role="navigation" style="transform: translateY(0px) translateX(0px);">
@@ -36,11 +35,19 @@
                     </a>
                 </div>
             </nav>
-            <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
-                <div class="icon-2 w-icon-nav-menu"></div>
-            </div>
         </div>
     </div>
+    
+    <div class="hidden-menu-container">
+        <button id="menuToggle" class="menu-toggle">M</button>
+        <div id="dropdownMenu" class="dropdown-menu hiddenMenu">
+            <a href="#hero">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#work">Work</a>
+            <a href="#life">Life</a>
+        </div>
+    </div>
+
     <div class="page-div hero" id="hero">
         <div class="section-title-feature-wrapper">
             <div class="section-title-feature">Welcome!</div>
@@ -195,4 +202,5 @@
     <!--div class="page-div footer" id="footer">
 
     </div-->
+    <script src="script.js"></script>
 </body>
