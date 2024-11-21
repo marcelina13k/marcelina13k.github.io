@@ -463,6 +463,24 @@ hr {
 
 .work-name {
     margin-bottom: 2px;
+    font-size: 22px;
+}
+
+.work-name-link {
+    margin-bottom: 2px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+.work-name-link:hover {
+    margin-bottom: 2px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    background-color: #badaff;
 }
 
 .role-desc {
@@ -597,6 +615,28 @@ hr {
 
     .work-experience {
         max-width: 90%;
+    }
+
+    .work-name {
+        margin-bottom: 2px;
+        font-size: 22px;
+    }
+
+    .work-name-link {
+        margin-bottom: 2px;
+        font-size: 22px;
+        text-decoration: none;
+        color: black;
+        font-weight: 900;
+    }
+
+    .work-name-link:hover {
+        margin-bottom: 2px;
+        font-size: 22px;
+        text-decoration: none;
+        color: black;
+        font-weight: 900;
+        background-color: #badaff;
     }
 
     .life-wrapper {
