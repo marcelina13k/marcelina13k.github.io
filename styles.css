@@ -218,6 +218,11 @@ section {
     margin-bottom: 8px;
 }
 
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+}
+
 .my-image {
     z-index: 1;
     width: 800px;
