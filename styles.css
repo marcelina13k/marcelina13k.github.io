@@ -220,7 +220,6 @@ section {
 
 .tech-stack {
     display: flex;
-    flex-direction: column;
 }
 
 .my-image {
