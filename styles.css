@@ -553,8 +553,15 @@ hr {
 .me-thing-list a {
     /*border-bottom: 1px solid rgba(0, 0, 0, .15);*/
     color: black;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
+
+.me-thing-list p {
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
 
 
 .page-div.footer {
