@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 </head>
 
@@ -20,7 +23,7 @@
                         <a href="#hero">About</a>
                         <a href="#projects">Projects</a>
                         <a href="#work">Work</a>
-                        <a href="#life">Life</a>
+                        <a href="#mind">Inside My Mind</a>
                         <a href="https://drive.google.com/file/d/1YZZCKacp4a-hRaGwUn_IRfD5iPkvmGuD/view?usp=drive_link" target=_blank>Resume</a>
                     </div>
                 </div>
@@ -48,7 +51,7 @@
             <a href="#hero">About</a>
             <a href="#projects">Projects</a>
             <a href="#work">Work</a>
-            <a href="#life">Life</a>
+            <a href="#mind">Inside My Mind</a>
             <a href="file:///C:/Users/mkrow/OneDrive/Documents/Marcelina%20Krowinska%20Resume%20(SWE).pdf" target=_blank>Resume</a>
         </div>
     </div>
@@ -59,9 +62,16 @@
         </div>
         <section class="main-section">
             <div class="intro">
-                <p style="font-size: 48px;">Hi! I'm Marcelina.</p>
-                <p style="font-size: 24px;">I'm a recent graduate from Virginia Tech with a BS in Computer Science. Experienced with frontend and backend development. Passionate about data, design, and music. Take a look around to learn more about me :)</p>
-                <p style="font-size: 24px;">Based in NYC.</p>
+                <p style="font-size: 48px;">Hi, I'm Marcelina.</p>
+                <p style="font-size: 24px;">Curious about where tech meets real life. Currently learning, building, and connecting through it.</p>
+                <div class="interest-section">
+                    <p class="interest-title">Currently hooked on:</p>
+                    <div class="interest-tags">
+                        <span class="interest-tag">AI</span>
+                        <span class="interest-tag">Wellness Tech</span>
+                        <span class="interest-tag">Creative Tools</span>
+                    </div>
+                </div>
             </div>
             <div class="my-image">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" overflow="-moz-hidden-unscrollable">
@@ -73,7 +83,7 @@
     </div>
     <div class="page-div projects" id="projects">
         <div class="section-title-feature-wrapper">
-            <div class="section-title-feature">Projects</div>
+            <div class="section-title-feature">Things I've Worked On</div>
         </div>
         <section class="project-section">
             <div class="search-wrapper">
@@ -86,47 +96,99 @@
                 </div>
             </div>
             <div class="project-tiles-wrapper">
-                <div class="project-tile one" onclick="location.href='https://github.com/cpdunphy/cinematch';" style="cursor: pointer;">
+                <div class="project-tile one">
                     <div class="project-desc">
-                        <h3>CineMatch</h3>
+                        <h3>Mood Mealz</h3>
                         <hr class="solid">
-                        <p> CineMatch will help pair you and your friends with the perfect film or show to watch. Users can join sessions with their friends, and the app has a swiping interface (similar to a dating app) for determining the optimal title to watch.</p>
+                        <p>Food impacts mental health and energy levels. Mood Meals helps users decide what to eat based on how they feel or want to feel.</p>
+                    </div>
+                    <div class="project-tag-wrapper">
+                        <div class="project-tag">React</div>
+                        <div class="project-tag">HTML/CSS</div>
+                        <div class="project-tag">JSON</div>
+                    </div>
+                </div>
+                <div class="project-tile two">
+                    <div class="project-desc">
+                        <h3>Campus Stamps</h3>
+                        <hr class="solid">
+                        <p>A digital passport for university events. Encourages campus involvement through gamification and rewards.</p>
+                    </div>
+                    <div class="project-tag-wrapper">
+                        <div class="project-tag">Flutter</div>
+                        <div class="project-tag">Firebase</div>
+                    </div>
+                </div>
+                <div class="project-tile three">
+                    <div class="project-desc">
+                        <h3>Cinematch</h3>
+                        <hr class="solid">
+                        <p>Helps you and your friends find the perfect movie to watch together through a swiping interface.</p>
                     </div>
                     <div class="project-tag-wrapper">
                         <div class="project-tag">Python</div>
                         <div class="project-tag">Flutter</div>
                     </div>
                 </div>
-                <div class="project-tile two">
+                 <div class="project-tile four">
                     <div class="project-desc">
-                        <h3>Mood Meals</h3>
-                        <p style="font-size: 12px; font-style: italic; margin-top: -10px; margin-bottom: 15px;">coming soon to App Store</p>
+                        <h3>Hokie SPA Chatbot</h3>
                         <hr class="solid">
-                        <p>Food impacts mental health and energy levels, yet most people struggle to align their meals with their mood or desired emotional state. Mood Meals helps users easily decide what to eat based on how they feel or want to feel. "Feel. Eat. Thrive."</p>
-                    </div>
-                    <div class="project-tag-wrapper">
-                        <div class="project-tag">React</div>
-                        <div class="project-tag">JSON</div>
-                        <div class="project-tag">HTML/CSS</div>
-                    </div>
-                </div>
-                <div class="project-tile three" onclick="location.href='https://www.figma.com/design/1C98RsEIc3CcwO7VesDrbw/Architectural-Prototype?node-id=2-4&t=KIKrlZJn7BcjtaPs-0'" style="cursor: pointer;">
-                    <div class="project-desc">
-                        <h3>University AI Chatbot</h3>
-                        <hr class="solid">
-                        <p> Solution architecture prototype of AI-enhanced chatbot, seamlessly integrated into Virginia Tech's Hokie Spa to revolutionize student support. Leverages machine learning and external systems to streamline student scheduling.</p>
+                        <p>An AI-enhanced chatbot to revolutionize student support and streamline student scheduling at Virginia Tech.</p>
                     </div>
                     <div class="project-tag-wrapper">
                         <div class="project-tag">Solution Architecture</div>
+                        <div class="project-tag">AI</div>
                     </div>
                 </div>
             </div>
             <section class="tech-stack">
-                <h3>Working with...</h3>
+                <p>Working with a growing stack of technology</p>
                 <div class="tech-stack-icons">
-    
+                    <div class="tech-stack-icon">
+                        <a href="https://react.dev/">
+                            <img src="python.svg">
+                        </a>
+                    </div>
+                    <div class="tech-stack-icon">
+                        <a href="https://react.dev/">
+                            <img src="react.svg">
+                        </a>
+                    </div>
+                    <div class="tech-stack-icon">
+                        <a href="https://react.dev/">
+                            <img src="git.svg">
+                        </a>
+                    </div>
+                    <div class="tech-stack-icon">
+                        <a href="https://react.dev/">
+                            <img src="figma.svg">
+                        </a>
+                    </div>
+                    <div class="tech-stack-icon">
+                        <a href="https://react.dev/">
+                            <img src="docker.svg">
+                        </a>
+                    </div>
                 </div>
             </section>
+        </section>
+    </div>
+    <div class="page-div skills" id="skills">
+        <div class="section-title-feature-wrapper">
+            <div class="section-title-feature">Skills</div>
+        </div>
+        <section class="skills-section">
+            <div class="skills-grid">
+                <div class="skill-tag tech">JavaScript</div>
+                <div class="skill-tag tech">React</div>
+                <div class="skill-tag tech">Python</div>
+                <div class="skill-tag tech">Supabase</div>
+                <div class="skill-tag design">Figma</div>
+                <div class="skill-tag tech">OpenAI API</div>
+                <div class="skill-tag soft">Prompting</div>
+                <div class="skill-tag soft">Product Thinking</div>
+            </div>
         </section>
     </div>
     <div class="page-div work" id="work">
@@ -135,67 +197,81 @@
         </div>
         <section class="work-section">
             <div class="work-wrapper">
-                <div class="work-experience one">
-                    <!--h3 class="work-name">Shade Inc.</h3-->
-                    <a href="https://shade.inc/" class="work-name-link">Shade Inc.</a>
-                    <p class="role-desc">Product Manager, Developer Advocate</p>
-                    <p>As a Product Manager at Shade, I managed the Creator Program for product beta testing and quality analysis. I led client outreach, establishing relationships with over 200 industry professionals to facilitate early product adoption. I initiated a social media presence, achieving a 500% follower increase in one month. Additionally, I analyzed business data to construct a marketing plan and contributed to the front-end development of the company website, enhancing user experience.</p>
+                <div class="work-experience">
+                    <div class="work-timeline">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="work-details">
+                        <h3 class="work-role">Product Manager, Developer Advocate</h3>
+                        <p class="work-meta">Shade Inc. | New York, NY | Internship</p>
+                        <p class="work-dates">May 2023 - Aug 2023</p>
+                        <p class="work-summary">Managed creator program for beta testing, led client outreach establishing relationships with 200+ professionals, and contributed to front-end development.</p>
+                    </div>
                 </div>
-                <div class="work-experience two">
-                    <h3 class="work-name">Neighborhood Camp</h3>
-                    <p class="role-desc">Founder, Manager, Counselor</p>
-                    <p>As the founder and manager of Neighborhood Camp, I established and managed a summer camp serving over 50 children, demonstrating entrepreneurial spirit and leadership. I ensured smooth daily operations, managed financial resources for sustainable growth, and cultivated open communication with clients to implement feedback. Additionally, I recruited, trained, and mentored a team of co-counselors, fostering a collaborative environment.</p>
+                <div class="work-experience">
+                    <div class="work-timeline">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="work-details">
+                        <h3 class="work-role">Founder, Manager, Counselor</h3>
+                        <p class="work-meta">Neighborhood Camp | Arlington, VA | Self-Employed</p>
+                        <p class="work-dates">Jun 2020 - Aug 2022</p>
+                        <p class="work-summary">Established and managed a summer camp for 50+ children, handled operations and finance, and mentored a team of co-counselors.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-    <div class="page-div life" id="life">
+    <div class="page-div mind" id="mind">
         <div class="section-title-feature-wrapper">
-            <div class="section-title-feature">Life</div>
+            <div class="section-title-feature">Inside My Mind</div>
         </div>
-        <section class="life-section">
+        <section class="mind-section">
             <p>A random collection of other important things that make up my life</p>
-            <div class="life-wrapper">
-                <div class="me-thing-horizontal one">
-                    <div class="me-thing-desc">
-                        <p style="font-size: 36px; margin-bottom: 5px;">Music</p>
-                        <p>I listen to music pretty much 24/7. Check out my Spotify to see the soundtrack of my life.</p>
+            <div class="mind-grid">
+                <div class="mind-tile reading">
+                    <h3>Reading List</h3>
+                    <div class="tile-content">
+                        <ul>
+                            <li>Under the Eye of the Big Bird</li>
+                            <li>Women's Hotel</li>
+                            <li><a href="https://wooded-guppy-9ef.notion.site/Reading-List-3bc1afe6f31e4ae1aac2b6d3bab2d69e?pvs=4" target="_blank" rel="noopener noreferrer">See my full list...</a></li>
+                        </ul>
                     </div>
-                    <div class="me-thing-visual">
-                        <!--a href="https://open.spotify.com/user/mkrowinska?si=3fd3893d9fae48db" target="blank" rel="noopener noreferrer"">
-                            <img src="Spotify.png" height="200px">
-                        </a-->
+                </div>
+                <div class="mind-tile articles">
+                    <h3>Favorite Articles</h3>
+                    <div class="tile-content">
+                         <ul>
+                            <li><a href="https://eunoia.world/" target="_blank" rel="noopener noreferrer">Eunoia: Words that don't translate</a></li>
+                            <li><a href="https://vanschneider.com/blog/aiaiai/" target="_blank" rel="noopener noreferrer">AIAIAI</a></li>
+                            <li><a href="https://liveterm.vercel.app/" target="_blank" rel="noopener noreferrer">Cool Terminal Personal Site</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mind-tile podcasts">
+                    <h3>Favorite Podcasts</h3>
+                     <div class="tile-content">
+                        <ul>
+                            <li>🎧 On Being</li>
+                            <li>🎧 The Daily</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mind-tile spotify">
+                    <h3>Spotify Playlists</h3>
+                     <div class="tile-content">
                         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/67GvlUv0oW0abUv01cTOuB?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </div>
                 </div>
-                <div class="me-thing-horizontal two">
-                    <div class="me-thing-desc">
-                        <p style="font-size: 36px; margin-bottom: 5px;">Fitness</p>
-                        <p>Keeps me sane. Grew up swimming, now dabble in running, tennis, and crossfit.</p>
-                    </div>
-                    <div class="me-thing-visual">
-                        <img src="fitness.png" height="200px">
-                    </div>
-                </div>
-                <div class="me-thing-vertical one">
-                    <div class="me-thing-desc-vert">
-                        <p style="font-size: 36px; margin-bottom: 5px; margin-top: 0;">My favorite websites</p>
-                        <p>Websites, articles, resources, etc. that I find cool, helpful, interesting, etc. that you should know about too.</p>
-                    </div>
-                    <div class="me-thing-list">
-                        <a href="https://eunoia.world/">Eunoia: Words that don't translate</a>
-                        <a href="https://vanschneider.com/blog/aiaiai/">AIAIAI</a>
-                        <a href="https://liveterm.vercel.app/">Cool Terminal Personal Site</a>
-                    </div>
-                </div>
-                <div class="me-thing-vertical two">
-                    <div class="me-thing-desc-vert">
-                        <p style="font-size: 36px; margin-bottom: 5px; margin-top: 0;">My reading list</p>
-                    </div>
-                    <div class="me-thing-list">
-                        <p>Reading now: Under the Eye of the Big Bird by Hirmoi Kawakami</p>
-                        <p>Just finished: Women's Hotel by Daniel M. Lavery</p>
-                        <a href="https://wooded-guppy-9ef.notion.site/Reading-List-3bc1afe6f31e4ae1aac2b6d3bab2d69e?pvs=4" style="color: black;" target="blank" rel="noopener noreferrer"">See my full list with thoughts and ratings</a>
+                <div class="mind-tile creators">
+                    <h3>Favorite Creators</h3>
+                     <div class="tile-content">
+                         <ul>
+                            <li>Ali Abdaal</li>
+                            <li>Casey Neistat</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -206,3 +282,4 @@
     </div-->
     <script src="script.js"></script>
 </body>
+

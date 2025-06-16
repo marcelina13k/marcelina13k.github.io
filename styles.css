@@ -8,11 +8,12 @@ body {
     /*background: linear-gradient(-45deg, #0e1c36, #2f003b, #0c1a61, #0e1c36);
     background: 400% 800%;
 	animation: bg-animation 5s infinite alternate;*/
-    background-color: #0c1a61;
+    background-color: #fffde4; /* soft butter yellow */
 	height: 100vh;
-    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 @keyframes bg-animation {
@@ -99,7 +100,7 @@ body {
     width: 50px;
     height: 50px;
     font-size: 18px;
-    color: white;
+    color: #333;
 }
 
 .title-wrapper {
@@ -113,7 +114,7 @@ body {
 
 .title-wrapper a {
     text-decoration: none;
-    color: white;
+    color: #333;
     font-weight:400;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -154,9 +155,40 @@ body {
     position: relative;
 }
 
+.interest-section {
+    margin-top: 20px;
+}
+
+.interest-title {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.interest-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.interest-tag {
+    background-color: #ffeac9;
+    color: #c06000;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.interest-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 172, 105, 0.5);
+}
+
 .section-title-feature-wrapper {
     z-index: 3;
-    box-shadow: 0 4px 20px -7px #0075fa;
+    box-shadow: 0 4px 20px -7px rgba(0, 117, 250, 0.5);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, .2);
@@ -213,13 +245,35 @@ section {
 
 .intro p {
     font-weight:500;
-    color: black;
+    color: #333;
     margin-top: 0;
     margin-bottom: 8px;
 }
 
 .tech-stack {
     display: flex;
+    flex-direction: column;
+}
+
+.tech-stack-icons {
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+}
+
+.tech-stack-icon {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.tech-stack-icon a img {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    display: block;
+    max-width: 100%;
 }
 
 .my-image {
@@ -248,7 +302,7 @@ section {
     margin: 10px 10px 0 200px;
     padding: 3vw;
     border-radius: 24px;
-    background-color: white;
+    background-color: #fefcf7; /* off-white cream */
 }
 
 .page-div.hero {
@@ -325,7 +379,7 @@ hr {
     align-items:flex-start;
     align-self: center;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     /*tell the container to always create as much columns as needed and size 
     them to fill the whole width (auto-fill), with the constraint that a single 
     column must be at least 350px wide and at most 1fr(FRaction) wide, which makes all our columns sized equally.*/
@@ -335,8 +389,8 @@ hr {
     flex-flow: row;
     object-fit: fill;
     text-align: center;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
     max-width: 90%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -345,26 +399,22 @@ hr {
 
 .project-tile {
     z-index: 2;
-    box-shadow: 0 4px 20px -7px #0479ff;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    /*border: 1px solid rgba(0, 0, 0, .15);*/
-    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     align-items: center;
     width: 250px;
-    height: 400px;
+    height: 350px;
     min-height: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 20px 30px 20px;
-    top: 3vh;
-    bottom: 3vh;
-    color: black;
+    padding: 20px 20px 30px 20px;
+    color: #333;
     background-color: white;
-    /*background-image: radial-gradient(at right top, #ffffff, #bfe3ff);*/
+    cursor: pointer;
 }
 
 .project-desc {
@@ -412,19 +462,70 @@ hr {
     padding-right: 5px;
 }
 
+.project-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
 .project-tile.one:hover {
-    background-image: url(mesh-gradient.png);
-    color: white;
+    background-image: none;
+    background-color: #fff9e6;
+    color: #333;
 }
 
 .project-tile.two:hover {
-    background-image: url(mesh-gradient2.png);
-    color: white;
+    background-image: none;
+    background-color: #fbeaff;
+    color: #333;
 }
 
 .project-tile.three:hover {
-    background-image: url(mesh-gradient.png);
-    color: white;
+    background-image: none;
+    background-color: #e6f9ff;
+    color: #333;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 80%;
+}
+
+.skill-tag {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.skill-tag.tech {
+    background-color: #ffeadb;
+    color: #c06000;
+}
+
+.skill-tag.design {
+    background-color: #ffdde5;
+    color: #a30030;
+}
+
+.skill-tag.soft {
+    background-color: #f0f6c2;
+    color: #4b6d00;
 }
 
 .project-tiles-wrapper {
@@ -437,7 +538,7 @@ hr {
     justify-content: space-around;
 }
 
-.learning-wrapper div{
+.learning-wrapper div {
     width: 40%;
     max-width: 50%;
 }
@@ -452,39 +553,82 @@ hr {
 }
 
 .work-wrapper {
-    align-content: center;
-}
-
-.work-wrapper div {
-    border-bottom: 1px solid #afafaf;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    position: relative;
+    padding-left: 20px;
 }
 
 .work-experience {
-    max-width: 70%;
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
 }
 
-.work-name {
-    margin-bottom: 2px;
-    font-size: 22px;
+.work-experience:last-child .timeline-line {
+    display: none;
+}
+
+.work-timeline {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ffac69;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-line {
+    width: 2px;
+    background-color: #e0e0e0;
+    flex-grow: 1;
+}
+
+.work-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-role {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.work-meta {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 4px 0;
+}
+
+.work-dates {
+    font-size: 14px;
+    color: #777;
+    margin: 0 0 10px 0;
+}
+
+.work-summary {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 90%;
 }
 
 .work-name-link {
-    margin-bottom: 2px;
-    font-size: 22px;
     text-decoration: none;
-    color: black;
-    font-weight: 900;
+    color: #333;
+    font-weight: 700;
 }
 
 .work-name-link:hover {
-    margin-bottom: 2px;
-    font-size: 22px;
-    text-decoration: none;
-    color: black;
-    font-weight: 900;
-    background-color: #badaff;
+    background-color: #ffeadb;
 }
 
 .role-desc {
@@ -562,15 +706,93 @@ hr {
     margin-top: 4px;
 }
 
+.mind-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.mind-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.mind-tile {
+    padding: 25px;
+    border-radius: 16px;
+    color: #333;
+    min-height: 120px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.mind-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.mind-tile h3 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.mind-tile .tile-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.5s ease;
+}
+
+.mind-tile:hover .tile-content {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.mind-tile .tile-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.mind-tile .tile-content ul li {
+    margin-bottom: 8px;
+}
+.mind-tile .tile-content a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+.mind-tile .tile-content a:hover {
+    border-bottom-color: #333;
+}
+
+/* Gradients */
+.mind-tile.reading {
+    background: linear-gradient(135deg, #fff0e2, #fffde4);
+}
+.mind-tile.articles {
+    background: linear-gradient(135deg, #fde2ff, #fffde4);
+}
+.mind-tile.podcasts {
+    background: linear-gradient(135deg, #e2f7ff, #fffde4);
+}
+.mind-tile.spotify {
+    background: linear-gradient(135deg, #e2ffed, #fffde4);
+}
+.mind-tile.creators {
+    background: linear-gradient(135deg, #ffefe2, #fffde4);
+}
 
 .page-div.footer {
     background-color: black;
     color: white;
 }
-
-
-
 
 @media screen and (max-width: 767px) {
     .sticky-nav {
@@ -678,9 +900,9 @@ hr {
         position: absolute;
         top: 20px;
         right: 20px;
-        background-color: #13102a;
-        color: #d8d8d8;
-        border: none;
+        background-color: #fefcf7;
+        color: #333;
+        border: 1px solid #ddd;
         padding: 10px 15px;
         border-radius: 24px;
         cursor: pointer;
@@ -693,7 +915,7 @@ hr {
         top: -100%;
         left: 0;
         width: 100%;
-        background-color: rgba(19, 16, 42, 0.9);
+        background-color: rgba(255, 253, 228, 0.9);
         backdrop-filter: blur(5px);
         padding: 60px 20px 20px;
         transition: top 0.3s ease-in-out;
@@ -705,7 +927,7 @@ hr {
 
     .dropdown-menu a {
         display: block;
-        color: #d8d8d8;
+        color: #333;
         text-decoration: none;
         padding: 10px 0;
         font-size: 18px;
