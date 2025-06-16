@@ -8,12 +8,12 @@ body {
     /*background: linear-gradient(-45deg, #0e1c36, #2f003b, #0c1a61, #0e1c36);
     background: 400% 800%;
 	animation: bg-animation 5s infinite alternate;*/
-    background-color: #fffde4; /* soft butter yellow */
+    background-color: #0a192f; /* deep dark blue */
 	height: 100vh;
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #ccd6f6; /* light text */
 }
 
 @keyframes bg-animation {
@@ -100,7 +100,7 @@ body {
     width: 50px;
     height: 50px;
     font-size: 18px;
-    color: #333;
+    color: #fff;
 }
 
 .title-wrapper {
@@ -114,7 +114,7 @@ body {
 
 .title-wrapper a {
     text-decoration: none;
-    color: #333;
+    color: #ccd6f6;
     font-weight:400;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -172,8 +172,8 @@ body {
 }
 
 .interest-tag {
-    background-color: #ffeac9;
-    color: #c06000;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -183,7 +183,8 @@ body {
 
 .interest-tag:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255, 172, 105, 0.5);
+    box-shadow: none;
+    background-color: rgba(100, 255, 218, 0.2);
 }
 
 .section-title-feature-wrapper {
@@ -191,8 +192,8 @@ body {
     box-shadow: 0 4px 20px -7px rgba(0, 117, 250, 0.5);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    background-color: rgba(255, 255, 255, .2);
-    border: 1px solid rgba(0, 0, 0, .15);
+    background-color: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .1);
     border-radius: 24px;
     flex-direction: row;
     grid-template-rows: auto auto;
@@ -214,7 +215,7 @@ body {
 }
 
 .section-title-feature {
-    color: #585858;
+    color: #ccd6f6;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -245,7 +246,7 @@ section {
 
 .intro p {
     font-weight:500;
-    color: #333;
+    color: #ccd6f6;
     margin-top: 0;
     margin-bottom: 8px;
 }
@@ -302,7 +303,7 @@ section {
     margin: 10px 10px 0 200px;
     padding: 3vw;
     border-radius: 24px;
-    background-color: #fefcf7; /* off-white cream */
+    background-color: transparent;
 }
 
 .page-div.hero {
@@ -399,7 +400,7 @@ hr {
 
 .project-tile {
     z-index: 2;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     border-radius: 16px;
     display: flex;
@@ -407,13 +408,13 @@ hr {
     justify-content:space-between;
     align-items: center;
     width: 250px;
-    height: 350px;
+    height: 280px;
     min-height: 30px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 20px 30px 20px;
-    color: #333;
-    background-color: white;
+    color: #ccd6f6;
+    background-color: #112240;
     cursor: pointer;
 }
 
@@ -464,25 +465,25 @@ hr {
 
 .project-tile:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .project-tile.one:hover {
     background-image: none;
-    background-color: #fff9e6;
-    color: #333;
+    background-color: #1a2c4a;
+    color: #ccd6f6;
 }
 
 .project-tile.two:hover {
     background-image: none;
-    background-color: #fbeaff;
-    color: #333;
+    background-color: #1a2c4a;
+    color: #ccd6f6;
 }
 
 .project-tile.three:hover {
     background-image: none;
-    background-color: #e6f9ff;
-    color: #333;
+    background-color: #1a2c4a;
+    color: #ccd6f6;
 }
 
 .skills-section {
@@ -497,20 +498,32 @@ hr {
     gap: 15px;
     justify-content: center;
     max-width: 80%;
+    margin: 40px auto;
 }
 
 .skill-tag {
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    color: #64ffda;
     padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 50px;
+    font-size: 14px;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     cursor: default;
+    display: flex;
+    align-items: center;
+}
+
+.skill-tag i {
+    margin-right: 8px;
+    font-size: 16px;
 }
 
 .skill-tag:hover {
+    background-color: rgba(100, 255, 218, 0.1);
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: none;
 }
 
 .skill-tag.tech {
@@ -601,17 +614,18 @@ hr {
     font-size: 20px;
     font-weight: 700;
     margin: 0 0 4px 0;
+    color: #fff;
 }
 
 .work-meta {
     font-size: 16px;
-    color: #555;
+    color: #a8b2d1;
     margin: 0 0 4px 0;
 }
 
 .work-dates {
     font-size: 14px;
-    color: #777;
+    color: #8892b0;
     margin: 0 0 10px 0;
 }
 
@@ -619,16 +633,17 @@ hr {
     font-size: 16px;
     line-height: 1.6;
     max-width: 90%;
+    color: #a8b2d1;
 }
 
 .work-name-link {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 700;
 }
 
 .work-name-link:hover {
-    background-color: #ffeadb;
+    background-color: rgba(100, 255, 218, 0.1);
 }
 
 .role-desc {
@@ -724,7 +739,7 @@ hr {
 .mind-tile {
     padding: 25px;
     border-radius: 16px;
-    color: #333;
+    color: #ccd6f6;
     min-height: 120px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -734,13 +749,14 @@ hr {
 
 .mind-tile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .mind-tile h3 {
     margin: 0 0 15px 0;
     font-size: 22px;
     font-weight: 700;
+    color: #fff;
 }
 
 .mind-tile .tile-content {
@@ -764,29 +780,29 @@ hr {
     margin-bottom: 8px;
 }
 .mind-tile .tile-content a {
-    color: #333;
+    color: #ccd6f6;
     text-decoration: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #4d5d7d;
 }
 .mind-tile .tile-content a:hover {
-    border-bottom-color: #333;
+    border-bottom-color: #64ffda;
 }
 
 /* Gradients */
 .mind-tile.reading {
-    background: linear-gradient(135deg, #fff0e2, #fffde4);
+    background: linear-gradient(135deg, #2a0d45, #112240);
 }
 .mind-tile.articles {
-    background: linear-gradient(135deg, #fde2ff, #fffde4);
+    background: linear-gradient(135deg, #0d3b45, #112240);
 }
 .mind-tile.podcasts {
-    background: linear-gradient(135deg, #e2f7ff, #fffde4);
+    background: linear-gradient(135deg, #3b0d45, #112240);
 }
 .mind-tile.spotify {
-    background: linear-gradient(135deg, #e2ffed, #fffde4);
+    background: linear-gradient(135deg, #0d452f, #112240);
 }
 .mind-tile.creators {
-    background: linear-gradient(135deg, #ffefe2, #fffde4);
+    background: linear-gradient(135deg, #1e0d45, #112240);
 }
 
 .page-div.footer {
@@ -836,7 +852,7 @@ hr {
         margin-right: 1vw;
         padding: 3vw;
         border-radius: 24px;
-        background-color: white;
+        background-color: #112240;
     }
 
     .intro {
