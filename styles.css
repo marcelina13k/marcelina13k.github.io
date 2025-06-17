@@ -875,6 +875,17 @@ hr {
 .mind-tile.creators:hover { background: linear-gradient(135deg, #ffe2f8, #fddff5); }
 .mind-tile.websites:hover { background: linear-gradient(135deg, #fffce2, #fff9d4); }
 
+.site-footer {
+    margin: 20px 3vw 20px 200px;
+    text-align: right;
+}
+
+.site-footer p {
+    font-size: 14px;
+    color: #8892b0;
+    margin: 0;
+}
+
 .page-div.footer {
     background-color: black;
     color: white;
@@ -976,6 +987,11 @@ hr {
 
     .mind-tile:hover {
         transform: none;
+    }
+
+    .site-footer {
+        margin: 20px 10px;
+        text-align: center;
     }
 }
 
