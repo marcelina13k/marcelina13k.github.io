@@ -539,7 +539,7 @@ hr {
 }
 
 .skills-subtitle {
-    font-size: 0.9em;
+    font-size: 0.75em;
     color: #666;
     width: 80%;
     margin: 0 auto 20px;
@@ -787,10 +787,24 @@ hr {
     align-items: center;
 }
 
+.mind-section p {
+    margin-bottom: 20px;
+}
+
+.mind-subtitle {
+    font-size: 1em;
+    color: #666;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
 .mind-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     width: 100%;
     max-width: 900px;
     margin-top: 20px;
@@ -799,36 +813,30 @@ hr {
 .mind-tile {
     padding: 25px;
     border-radius: 16px;
-    color: #333; /* Dark text */
-    min-height: 120px;
+    color: #333;
+    min-height: 220px;
     transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: default;
     display: flex;
     flex-direction: column;
+    background-color: transparent;
+    border: 2px solid;
 }
 
 .mind-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
 .mind-tile h3 {
     margin: 0 0 15px 0;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
-    color: #111; /* Darker for heading */
+    color: #111;
 }
 
 .mind-tile .tile-content {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.4s ease, max-height 0.5s ease;
-}
-
-.mind-tile:hover .tile-content {
-    opacity: 1;
-    max-height: 200px;
+    /* No longer hidden by default */
 }
 
 .mind-tile .tile-content ul {
@@ -837,8 +845,16 @@ hr {
     margin: 0;
 }
 .mind-tile .tile-content ul li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
+
+.mind-tile .tile-content ul li:nth-child(n+3) {
+    display: none;
+}
+.mind-tile:hover .tile-content ul li {
+    display: list-item;
+}
+
 .mind-tile .tile-content a {
     color: #333;
     text-decoration: none;
@@ -848,22 +864,33 @@ hr {
     border-bottom-color: #333;
 }
 
-/* Gradients */
-.mind-tile.reading {
-    background: linear-gradient(135deg, #fde2ff, #e6f9ff);
+.mind-tile.spotify .tile-content ul li:nth-child(n+2) {
+    display: none;
 }
-.mind-tile.articles {
-    background: linear-gradient(135deg, #e2fff7, #e6f9ff);
+.mind-tile.spotify .extra-spotify {
+    display: none;
 }
-.mind-tile.podcasts {
-    background: linear-gradient(135deg, #e6e2ff, #e6f9ff);
+.mind-tile.spotify:hover .extra-spotify {
+    display: block;
+    margin-top: 15px;
 }
-.mind-tile.spotify {
-    background: linear-gradient(135deg, #f0e2ff, #e6f9ff);
-}
-.mind-tile.creators {
-    background: linear-gradient(135deg, #e2f7ff, #fde2ff);
-}
+
+
+/* Gradients and Borders */
+.mind-tile.reading { border-color: #ffac69; }
+.mind-tile.articles { border-color: #69ffc3; }
+.mind-tile.podcasts { border-color: #69b0ff; }
+.mind-tile.spotify { border-color: #b869ff; }
+.mind-tile.creators { border-color: #ff69dc; }
+.mind-tile.websites { border-color: #ffea69; }
+
+.mind-tile.reading:hover { background: linear-gradient(135deg, #fff0e2, #ffeadb); }
+.mind-tile.articles:hover { background: linear-gradient(135deg, #e2fff7, #d8ffef); }
+.mind-tile.podcasts:hover { background: linear-gradient(135deg, #e2f0ff, #e6f9ff); }
+.mind-tile.spotify:hover { background: linear-gradient(135deg, #f0e2ff, #f5eaff); }
+.mind-tile.creators:hover { background: linear-gradient(135deg, #ffe2f8, #fddff5); }
+.mind-tile.websites:hover { background: linear-gradient(135deg, #fffce2, #fff9d4); }
+
 
 .page-div.footer {
     background-color: black;
