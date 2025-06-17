@@ -1,13 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    if (menuToggle && dropdownMenu) {
-        menuToggle.addEventListener('click', function() {
-            dropdownMenu.classList.toggle('active');
-        });
-    }
-
     // --- New Project Carousel Logic ---
     const carousel = document.querySelector('.project-carousel');
     if (carousel && window.innerWidth > 767) {
