@@ -918,20 +918,56 @@ hr {
     }
 
     .page-div {
-        margin-left: 1vw;
-        margin-right: 1vw;
-        padding: 3vw;
+        margin: 20px 1vw 0;
+        padding: 8vw 5vw;
         border-radius: 24px;
         background-color: #fefcf7;
     }
 
     .intro {
         max-width: 90%;
+        margin: 0 auto;
+        padding-bottom: 0;
     }
     .my-image {
         display: none;
     }
-
+    .project-tile {
+        width: 280px;
+        height: auto;
+        min-height: 200px;
+    }
+    .project-content h3 {
+        font-size: 22px;
+    }
+    .project-content .project-description {
+        font-size: 14px;
+    }
+    .carousel-nav {
+        max-width: calc(100% - 20px);
+    }
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    .skills-grid {
+        max-width: 95%;
+    }
+    .skill-tag {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+    .mind-subtitle {
+        padding: 0 15px;
+    }
+    .mind-tile .tile-content {
+        max-height: none;
+    }
+    .mind-tile:hover {
+        transform: none;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
     .work-experience {
         max-width: 90%;
     }
