@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- New Project Carousel Logic ---
     const carousel = document.querySelector('.project-carousel');
-    if (carousel) {
+    if (carousel && window.innerWidth > 767) {
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         let projectLinks = document.querySelectorAll('.project-tile-link');
