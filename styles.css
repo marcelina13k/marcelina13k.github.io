@@ -482,12 +482,14 @@ hr {
 .carousel-nav {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
+    max-width: 620px;
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
     pointer-events: none;
+    z-index: 10;
 }
 
 .carousel-btn {
@@ -501,6 +503,7 @@ hr {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.2s ease;
+    color: #333;
 }
 
 .carousel-btn:hover {
@@ -509,13 +512,11 @@ hr {
 }
 
 #prevBtn {
-    position: absolute;
-    left: -50px;
+    /* No special styles needed */
 }
 
 #nextBtn {
-    position: absolute;
-    right: -50px;
+    /* No special styles needed */
 }
 
 .skills-section {
