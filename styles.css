@@ -400,8 +400,8 @@ hr {
 
 .project-carousel {
     display: flex;
+    overflow-x: scroll;
     padding: 20px 0;
-    scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none; 
 }
