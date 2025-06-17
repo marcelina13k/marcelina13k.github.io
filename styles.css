@@ -590,6 +590,10 @@ hr {
     padding-left: 40px;
 }
 
+.work-experience:last-child {
+    margin-bottom: 0;
+}
+
 .work-experience:last-child .timeline-line {
     display: none;
 }
@@ -598,7 +602,7 @@ hr {
     position: absolute;
     left: 0;
     top: 5px;
-    height: 100%;
+    height: calc(100% + 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -610,6 +614,11 @@ hr {
     background-color: #ffac69;
     border-radius: 50%;
     z-index: 1;
+}
+
+.work-experience.current .timeline-dot {
+    background-color: #ff8c3c;
+    box-shadow: 0 0 10px 3px rgba(255, 172, 105, 0.7);
 }
 
 .timeline-line {
