@@ -880,74 +880,82 @@ hr {
     color: white;
 }
 
+/* --- Mobile Styles - DO NOT AFFECT DESKTOP --- */
 @media screen and (max-width: 767px) {
-    .sticky-nav {
-        display: none;
-    }
-    
-    .page-div {
-        margin: 10px 1vw 0;
-        padding-top: 10vw;
-        padding-bottom: 10vw;
+    .sticky-nav, .hidden-menu-container, .carousel-nav {
+        display: none !important;
     }
 
+    .page-div {
+        margin: 10px 0 0 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .section-title-feature-wrapper {
+        margin-top: 5vw;
+    }
+    
+    .project-section {
+        width: 100%;
+    }
+
+    .project-carousel-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 40px 0;
+    }
+
+    .project-carousel {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: auto;
+        padding: 0 20px;
+        overflow-x: visible;
+        scroll-snap-type: x mandatory;
+    }
+
+    .project-tile-link {
+        flex: 0 0 80vw;
+        scroll-snap-align: center;
+        opacity: 1;
+    }
+    
+    .project-tile {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #fde2ff, #e2f7ff);
+        border: none;
+    }
+
+    .project-tile-link.active .project-tile, .project-tile-link:hover .project-tile {
+        transform: none;
+    }
+    
     .my-image {
         display: none;
     }
 
     .intro {
+        max-width: 90%;
         margin: 0 auto;
-        padding: 0;
-        max-width: 100%;
     }
 
-    .project-carousel-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-    .project-carousel {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        padding: 0 5vw;
-    }
-    .project-tile-link {
-        scroll-snap-align: center;
-        flex-shrink: 0;
-        opacity: 1;
-    }
-    .project-tile-link.active .project-tile, .project-tile-link:hover .project-tile {
-        transform: none;
-    }
-    .project-tile {
-        width: 80vw;
-        height: auto;
-        min-height: 250px;
-        background: linear-gradient(135deg, #fde2ff, #e2f7ff);
-        border: none;
-    }
-    .carousel-nav {
-        display: none;
-    }
-    
     .skills-grid {
         justify-content: center;
     }
 
-    .mind-subtitle {
-        padding: 0 15px;
-    }
-    
     .mind-tile .tile-content {
         max-height: none;
     }
 
     .mind-tile:hover {
         transform: none;
-    }
-    
-    .hidden-menu-container {
-        display: none !important;
     }
 }
 
