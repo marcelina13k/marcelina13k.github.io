@@ -220,6 +220,7 @@ body {
     margin-top: -10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     padding: 3px 20px;
     display: flex;
     position: -webkit-sticky;
@@ -348,18 +349,6 @@ section {
     margin-top: 10px;
     font-size: 24px;
     justify-content:flex-start;
-}
-
-.search-wrapper {
-    display:none;
-    /*display: flex;*/
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-    margin-bottom: 20px;
-    font-size: 16px;
-    width: 70%;
-    margin-top: 40px;
 }
 
 .view-buttons-wrapper {
@@ -803,8 +792,8 @@ hr {
 
 .mind-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
     width: 100%;
     max-width: 900px;
     margin-top: 20px;
@@ -814,18 +803,19 @@ hr {
     padding: 25px;
     border-radius: 16px;
     color: #333;
-    min-height: 220px;
+    min-height: 200px;
     transition: all 0.3s ease;
-    cursor: default;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    border: 2px solid;
+    position: relative;
+    z-index: 1;
 }
 
 .mind-tile:hover {
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    z-index: 10;
 }
 
 .mind-tile h3 {
@@ -836,7 +826,13 @@ hr {
 }
 
 .mind-tile .tile-content {
-    /* No longer hidden by default */
+   max-height: 90px;
+   overflow: hidden;
+   transition: max-height 0.4s ease;
+}
+
+.mind-tile:hover .tile-content {
+    max-height: 500px;
 }
 
 .mind-tile .tile-content ul {
@@ -848,13 +844,6 @@ hr {
     margin-bottom: 10px;
 }
 
-.mind-tile .tile-content ul li:nth-child(n+3) {
-    display: none;
-}
-.mind-tile:hover .tile-content ul li {
-    display: list-item;
-}
-
 .mind-tile .tile-content a {
     color: #333;
     text-decoration: none;
@@ -864,25 +853,20 @@ hr {
     border-bottom-color: #333;
 }
 
-.mind-tile.spotify .tile-content ul li:nth-child(n+2) {
-    display: none;
+.mind-tile.spotify .tile-content {
+    max-height: 155px; /* Fit one iframe */
 }
-.mind-tile.spotify .extra-spotify {
-    display: none;
-}
-.mind-tile.spotify:hover .extra-spotify {
-    display: block;
-    margin-top: 15px;
+.mind-tile.spotify:hover .tile-content {
+    max-height: 320px; /* Fit two iframes */
 }
 
-
-/* Gradients and Borders */
-.mind-tile.reading { border-color: #ffac69; }
-.mind-tile.articles { border-color: #69ffc3; }
-.mind-tile.podcasts { border-color: #69b0ff; }
-.mind-tile.spotify { border-color: #b869ff; }
-.mind-tile.creators { border-color: #ff69dc; }
-.mind-tile.websites { border-color: #ffea69; }
+/* Gradients */
+.mind-tile.reading { background: linear-gradient(135deg, #fff0e2, #ffeadb); }
+.mind-tile.articles { background: linear-gradient(135deg, #e2fff7, #d8ffef); }
+.mind-tile.podcasts { background: linear-gradient(135deg, #e2f0ff, #e6f9ff); }
+.mind-tile.spotify { background: linear-gradient(135deg, #f0e2ff, #f5eaff); }
+.mind-tile.creators { background: linear-gradient(135deg, #ffe2f8, #fddff5); }
+.mind-tile.websites { background: linear-gradient(135deg, #fffce2, #fff9d4); }
 
 .mind-tile.reading:hover { background: linear-gradient(135deg, #fff0e2, #ffeadb); }
 .mind-tile.articles:hover { background: linear-gradient(135deg, #e2fff7, #d8ffef); }
@@ -890,7 +874,6 @@ hr {
 .mind-tile.spotify:hover { background: linear-gradient(135deg, #f0e2ff, #f5eaff); }
 .mind-tile.creators:hover { background: linear-gradient(135deg, #ffe2f8, #fddff5); }
 .mind-tile.websites:hover { background: linear-gradient(135deg, #fffce2, #fff9d4); }
-
 
 .page-div.footer {
     background-color: black;
