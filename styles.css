@@ -400,13 +400,10 @@ hr {
 
 .project-carousel {
     display: flex;
-    align-items: center;
-    width: 100%;
     padding: 20px 0;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none; 
-    transition: transform 0.6s ease-in-out;
 }
 
 .project-carousel::-webkit-scrollbar {
@@ -420,12 +417,13 @@ hr {
     transition: transform 0.5s ease, opacity 0.5s ease;
     flex-shrink: 0;
     margin: 0 10px;
+    opacity: 0.7; /* Inactive tiles are slightly transparent */
 }
 
 .project-tile {
-    width: 200px; /* Inactive width */
-    height: 120px; /* Inactive height */
-    background-color: #f8f8f8;
+    width: 450px;
+    height: 300px;
+    background: linear-gradient(135deg, #fde2ff, #e2f7ff);
     border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     padding: 20px;
@@ -440,18 +438,18 @@ hr {
 }
 
 .project-content h3 {
-    font-size: 20px;
+    font-size: 28px;
     margin: 0 0 5px 0;
     transition: font-size 0.5s ease;
 }
 
 .project-content .project-description {
     font-size: 16px;
-    opacity: 0;
-    max-height: 0;
+    opacity: 1;
+    max-height: 150px;
     overflow: hidden;
     transition: opacity 0.4s ease, max-height 0.5s ease;
-    margin: 0;
+    margin: 10px 0;
 }
 
 .project-content .project-meta-info {
@@ -461,9 +459,10 @@ hr {
 }
 
 /* Active state */
+.project-tile-link.active {
+    opacity: 1;
+}
 .project-tile-link.active .project-tile {
-    width: 450px;  /* Active width */
-    height: 300px; /* Active height (3:2 ratio) */
     background: linear-gradient(135deg, #fde2ff, #e2f7ff);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transform: scale(1.05);
@@ -485,7 +484,7 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 620px;
+    max-width: 800px;
     display: flex;
     justify-content: space-between;
     pointer-events: none;
