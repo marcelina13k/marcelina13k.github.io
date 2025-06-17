@@ -172,19 +172,31 @@ body {
 }
 
 .interest-tag {
-    background-color: #e6f9ff; /* Light cool blue */
-    color: #006d9c; /* Dark cool blue text */
-    padding: 8px 15px;
-    border-radius: 20px;
+    background-color: transparent;
+    color: #555;
+    padding: 0;
+    border-radius: 0;
     font-size: 14px;
     font-weight: 500;
-    transition: all 0.2s ease-in-out;
+    transition: none;
+}
+
+.interest-tag::before {
+    content: '[';
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+.interest-tag::after {
+    content: ']';
+    font-weight: 700;
+    margin-left: 2px;
 }
 
 .interest-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0, 109, 156, 0.3);
-    background-color: #d1f3ff;
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
 }
 
 .section-title-feature-wrapper {
