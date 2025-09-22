@@ -299,19 +299,75 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow:-moz-hidden-unscrollable;
+    overflow: hidden;
+    position: relative;
 }
 
-.my-image svg {
+.my-image::before {
+    content: '';
     position: absolute;
-    /*transform: rotate(45deg);*/
-    overflow:-moz-hidden-unscrollable;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(0, 117, 250, 0.3) 0%, rgba(0, 117, 250, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: glow-pulse 3s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.my-image::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 117, 250, 0.15) 0%, rgba(0, 117, 250, 0.05) 50%, transparent 80%);
+    border-radius: 50%;
+    animation: glow-rotate 8s linear infinite;
+    z-index: 0;
 }
 
 .my-image img {
     z-index: 2;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 117, 250, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 48px rgba(0, 117, 250, 0.3);
+}
+
+@keyframes glow-pulse {
+    0% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@keyframes glow-rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(0.8);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(0.8);
+        opacity: 0.3;
+    }
 }
 
 .page-div {
@@ -889,6 +945,24 @@ hr {
 .page-div.footer {
     background-color: black;
     color: white;
+}
+
+/* --- Tablet Styles --- */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .my-image {
+        width: 600px;
+        height: 60vh;
+    }
+    
+    .my-image::before {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .my-image::after {
+        width: 320px;
+        height: 320px;
+    }
 }
 
 /* --- Mobile Styles - DO NOT AFFECT DESKTOP --- */
