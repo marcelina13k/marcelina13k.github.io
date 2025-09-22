@@ -299,7 +299,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
 }
 
@@ -309,10 +309,10 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 350px;
+    width: 450px;
     height: 350px;
-    background: radial-gradient(circle, rgba(0, 117, 250, 0.3) 0%, rgba(0, 117, 250, 0.1) 40%, transparent 70%);
-    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(0, 117, 250, 0.25) 0%, rgba(0, 117, 250, 0.08) 35%, rgba(0, 117, 250, 0.04) 60%, transparent 85%);
+    filter: blur(20px);
     animation: glow-pulse 3s ease-in-out infinite alternate;
     z-index: 1;
 }
@@ -323,10 +323,10 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(0, 117, 250, 0.15) 0%, rgba(0, 117, 250, 0.05) 50%, transparent 80%);
-    border-radius: 50%;
+    width: 500px;
+    height: 380px;
+    background: radial-gradient(ellipse, rgba(0, 117, 250, 0.12) 0%, rgba(0, 117, 250, 0.06) 40%, rgba(0, 117, 250, 0.02) 65%, transparent 90%);
+    filter: blur(30px);
     animation: glow-rotate 8s linear infinite;
     z-index: 0;
 }
@@ -335,13 +335,11 @@ section {
     z-index: 2;
     border-radius: 50%;
     position: relative;
-    box-shadow: 0 8px 32px rgba(0, 117, 250, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .my-image img:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 48px rgba(0, 117, 250, 0.3);
 }
 
 @keyframes glow-pulse {
@@ -955,13 +953,13 @@ hr {
     }
     
     .my-image::before {
-        width: 280px;
+        width: 360px;
         height: 280px;
     }
     
     .my-image::after {
-        width: 320px;
-        height: 320px;
+        width: 400px;
+        height: 300px;
     }
 }
 
